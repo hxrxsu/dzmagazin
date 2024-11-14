@@ -1,0 +1,40 @@
+﻿<Page x:Class="dzmagazin.Cafe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dzmagazin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Cafe">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="TB_Desc" Grid.ColumnSpan="2" FontSize="19" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="TB_OrderName" Grid.ColumnSpan="2" FontSize="19" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="TB_Price" Grid.ColumnSpan="2" FontSize="19" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center"/>
+
+        <Label Content="Order name" FontSize="19" Grid.Row="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Decription" FontSize="19" Grid.Row="4" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Price" FontSize="19" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+        <Button x:Name="BN_Add" Content="Add" Grid.Row="6" Click="BN_Add_Click"/>
+        <Button x:Name="BN_Del" Content="Delete" Grid.Row="6" Grid.Column="1" Click="BN_Del_Click"/>
+
+        <ListBox x:Name="LB_Items" Grid.Column="2" Grid.RowSpan="8"/>
+    </Grid>
+</Page>
